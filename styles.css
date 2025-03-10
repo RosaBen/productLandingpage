@@ -140,11 +140,12 @@ textarea{
 
     body{
         background-color: var(--infocolor);
+        width: fit-content;
+        margin: 1rem auto;
     }
 
     main{
-        display: flex;
-        align-items: flex-end;
+        width: calc(80vw - 2rem);
     }
     #header-container{
         display: flex;
@@ -152,7 +153,6 @@ textarea{
         padding: 1rem 2rem;
         background-color: var(--successcolor);
         color: var(--secondarycolor);
-        justify-content: center
     }
 
     #header-img{
@@ -179,7 +179,7 @@ h1{
     }
 
     #video{
-    width: 70vw;
+    width: calc(80vw - 2rem);
     height: 60vh;
     margin: 1rem auto;
     border-radius: 15px;
@@ -187,16 +187,14 @@ h1{
 
 #venue-information{
     display: flex;
-    align-items: baseline;
-    margin: 1rem 3rem;
     gap: 1rem;
-    width: calc(70vw - 2rem);
+    width: calc(80vw - 4rem);
+    margin:0;
 }
 
 #info-container{
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     gap: 1rem;
 }
 
@@ -207,6 +205,7 @@ h1{
 #contact-container{
     display: flex;
     flex-direction: column;
+    width: calc(80vw - 4rem);
 }
 
 input[type="submit"]{
@@ -216,10 +215,10 @@ input[type="submit"]{
 }
 
 fieldset{
-width: calc(100% - 2rem);
+width: calc(80vw - 6.5rem);
 display: flex;
 flex-direction: column;
-align-items: center;
+align-items: stretch;
 gap: 0.5rem;
 }
 
@@ -232,9 +231,40 @@ gap: 0.5rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    #nav-bar {
+
+        main{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    #header-container{
+        display: flex;
+        flex-direction: column;
+        padding:1rem 0;
+        background-color: var(--successcolor);
+        color: var(--secondarycolor);
+        justify-content: center;
+    }
+        #nav-bar {
         display: flex;
         flex-direction: row;
         gap: 1rem;
     }
+
+    #video{
+    width: calc(80vw - 2rem);
+    height: 60vh;
+    }
+
+    #venue-information{
+        width: calc(80vw - 2rem);
+    }
+
+    input[type="submit"]{
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid var(--successcolor);
+}
 }
