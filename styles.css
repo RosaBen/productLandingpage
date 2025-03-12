@@ -13,11 +13,12 @@ body{
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    padding-top: 80px;
 }
 
 main{
-    width: 75%;
-    margin: 1rem auto;
+    width: 64%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     background-color: var(--infocolor);
@@ -34,23 +35,32 @@ main{
     border-radius: 100px;
 }
 
-#header-container{
+#header-container {
+    position: fixed; 
+    top: 0;
+    width: 64% ;
+    max-width: 1200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 2rem;
     background-color: var(--successcolor);
     color: var(--secondarycolor);
 }
 
-#nav-bar {
+#logo-header{
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
 }
 
-.nav-link{
-    padding: 0.5rem;
+#nav-bar {
+    display: flex;
+    gap: 1rem; 
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
     text-align: center;
     color: var(--secondarycolor);
     background-color: var(--bodycolor);
@@ -70,18 +80,15 @@ main{
 #video{
     width: 60vw;
     height: 74vh;
-    display: flex;
-    justify-content: center;
-    margin: 1rem 5rem 0 5rem;
+    margin: 3rem auto 0;
     border-radius: 15px;
 }
 
 #venue-information{
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    margin: 1rem 5rem 2rem 5rem;
     width: 60vw;
+    flex-direction: column;
+    margin: 1rem auto;
     gap: 1rem;
 }
 
@@ -125,7 +132,7 @@ fieldset{
 }
 
  input[type="submit"]{
-    width: 10%;
+    width: 20%;
     border-radius: 15px;
     border: 2px solid var(--successcolor);
 }
@@ -147,18 +154,22 @@ textarea{
     main{
         width: calc(80vw - 2rem);
     }
+
     #header-container{
         display: flex;
         flex-direction: column;
-        padding: 1rem 2rem;
+        padding:1rem 0;
         background-color: var(--successcolor);
         color: var(--secondarycolor);
+        justify-content: center;
+        border-radius: 15px;
     }
 
     #header-img{
-    width: 40%;
-    height: 40%;
+    width: 30%;
+    height: 30%;
     border-radius: 100px;
+    padding: 0.5rem;
 }
 
 h1{
@@ -171,7 +182,13 @@ h1{
     }
 
     #nav-bar.active {
-        display: flex;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--successcolor);
+        width: 100%;
+        z-index: 1;
     }
 
     .menu-toggle {
@@ -246,11 +263,6 @@ gap: 0.5rem;
         background-color: var(--successcolor);
         color: var(--secondarycolor);
         justify-content: center;
-    }
-        #nav-bar {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
     }
 
     #video{
